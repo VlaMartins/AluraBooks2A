@@ -1,0 +1,66 @@
+@import url(style/header.css);
+:root{
+ --cor-de-fundo: #EBECEE;
+  --branco: #ffffff;
+ --laranja: #EB9B00;
+ --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+ --azul: #002F52;
+ --preto: #000000;
+ --cinza: #474646; --cinza-claro: #858585;
+
+}
+
+body{
+ background-color: var(--cor-de-fundo);
+}
+.cabeçalho__menu-hamburguer{
+ width: 24px;
+ height: 24px;
+ background-image: url(../img/img/Menu.svg);
+ background-repeat: no-repeat;
+ background-position: center;
+ display: inline-block;
+}
+.cabeçalho{
+ background-color: var(--branco);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ position: relative;
+ 
+}
+.container{
+ display: flex;
+ align-items: center;
+}
+.container__imagem{
+ padding: 1em;
+}
+
+.lista-menu{
+ display: none;
+ position: absolute;
+ top: 100%;
+ width: 60vw;
+}
+.container__botao:checked~.lista-menu{
+ display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item{
+ padding: 1em;
+ background-color: var(--branco);
+}
+
+.lista-menu__titulo{
+ color: var(--amarelo);
+}
+
+.lista-menu__link{
+ background: var(--roxo-degrade);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ background-clip: text;
+ text-transform: uppercase;
+}
