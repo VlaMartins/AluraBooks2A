@@ -1,32 +1,77 @@
-﻿.cabeçalho__menu-hamburguer{
-    width: 24px;
-    height: 24px;
-    background-image: url(../img/Menu.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    display: inline-block;
+﻿.cabeçalho {
+  background-color: var(--branco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /*aula hamb.*/
 }
 
-.cabeçalho{
-    background-color: var(--branco);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.cabeçalho__menu-hamburguer {
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/Menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
 }
 
-.container{
-display: flex;
-align-items: center;
+.container {
+  display: flex; 
+  align-items: center;
 }
 
-.container__imagem{
-    padding: 1em;
+.container__imagem {
+  padding: 1em;
 }
 
-.lista-menu{
-    display: none;
+.lista-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 60vw;//corresponde a 60% do tamanho da tela que eu estou usando
 }
 
-.container__botao:checked~.lista-menu{
-    
+.container__botao:checked~.lista-menu {
+  display: block;
 }
+
+/* aula hamb. 28/06*/
+.container__botao {
+  display: none;
+}
+
+.container__titulo {
+  display: none;
+}
+
+/*hamburguer */
+
+/*deixa o fundo branco e espaçado*/
+.lista-menu__titulo,
+.lista-menu__item {
+  padding: 1em;/*medida responsiva sobre */
+  background-color: var(--branco);
+}
+
+.lista-menu__titulo {
+  color: var(--laranja);
+  font-weight: 700;
+}
+
+.lista-menu__link {
+  background: var(--azul-degrade);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+}
+
+.container__botao:checked~.container__rotulo>.cabeçalho__menu-hamburguer {
+  background-image: url("../img/Menu Aberto.svg");
+}
+
+.container__botao:checked~.container__rotulo {
+  background: var(--azul-degrade);
+}
+
+
