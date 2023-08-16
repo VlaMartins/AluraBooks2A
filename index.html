@@ -2,44 +2,76 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alura Books Nome do Estudante </title>
-    <link rel="stylesheet" href="styles.css">
+    <title>AluraBooks Giovanna e Matheus </title>
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body> 
+<body>
     <header class="cabeçalho">
         <div class="container">
             <input type="checkbox" id="menu" class="container__botao">
-            <label for="menu" class="container__rotulo"> <!-- add essa classe-->
-                <span class="cabeçalho__menu-hamburguer container__imagem"></span>
-            </label>
-                <img src="img/Logo.svg" alt="Logotipo da Biblioteca Start" class="container__imagem"> <!--por debaixo do label-->
-
-            <ul class="lista-menu">
-                <li class="lista-menu__titulo">CATEGORIAS</li>
-                <li class="lista-menu__item">
-                   <a href="#" class="lista-menu__link">Aventura</a>
-                </li>
-                <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Biografia</a>
-                </li>
-                <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Ficção Científica</a>
-                </li>
-                <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Romance</a>
-                </li>
-                <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Vestibular</a>
-                </li>
-         </ul>
-         
-        <div class="container">
-            <a href="#"><img src="img/Favoritos.svg" alt="Favoritos" class="container__imagem"></a>
-            <a href="#"><img src="img/Compras.svg" alt="Compras" class="container__imagem"></a>
-            <a href="#"><img src="img/Usuário.svg" alt="Usuario" class="container__imagem"></a>
+        <label for="menu">
+            <span class="cabeçalho__menu-hamburguer container__imagem"></span>
+        </label>
+        <ul class="lista-menu">
+            <li class="lista-menu__titulo">Categorias</li>
+            <li class="lista-menu__item">
+               <a href="#" class="lista-menu__link">Aventura</a>
+            </li>
+            <li class="lista-menu__item">
+                <a href="#" class="lista-menu__link">Biografia</a>
+            </li>
+            <li class="lista-menu__item">
+                <a href="#" class="lista-menu__link">Ficção Científica</a>
+            </li>
+            <li class="lista-menu__item">
+                <a href="#" class="lista-menu__link">Romance</a>
+            </li>
+            <li class="lista-menu__item">
+                <a href="#" class="lista-menu__link">Vestibular</a>
+            </li>
+     </ul>
+     
+           <img src="img/Logo.svg" alt="logo da AluraBooks" class="container__imagem">
+        <h1 class="container__titulo"> Alura Books </h1>
         </div>
+        
+
+<ul class="opções">
+<input type="checkbox" id="opções-menu" class="opções__botão">
+<label for="opções-menu" class="opções__rotulo">
+<li class="opções__item"> Categorias ...</li>
+</label>
+<ul class="lista-menu"> <!-- essa lista e identica a do menu hamburguer -->
+<li class="lista-menu__item">
+<a href="#" class="lista-menu__link">Programação</a>
+</li>
+<li class="lista-menu__item">
+<a href="#" class="lista-menu__link">Front-end</a>
+</li>
+<li class="lista-menu__item">
+<a href="#" class="lista-menu__link">Infraestrutura</a>
+</li>
+<li class="lista-menu__item">
+<a href="#" class="lista-menu__link">Business</a>
+</li>
+<li class="lista-menu__item">
+<a href="#" class="lista-menu__link">Design & UX</a>
+</li>
+</ul>
+<li class="opções__item"><a href="#" class="opções__link">Favoritos</a></li>
+<li class="opções__item"><a href="#" class="opções__link">Minha estante</a></li>
+</ul>
+    <div class="container">
+        <a href="#"><img src="img/Favoritos.svg" alt="" class="container__imagem container-transparente"></a>
+        <a href="#"><img src="img/Compras.svg" alt="" class="container__imagem"></a>
+        <p class="container__texto"> Minhas Compras </p>
+        <a href="#"><img src="img/Usuário.svg" alt="" class="container__imagem"></a>
+        <p class="container__texto"> Perfil</p>
+    </div>
     </header>
+    
 </body>
 </html>

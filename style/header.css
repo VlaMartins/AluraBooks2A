@@ -1,77 +1,182 @@
-﻿.cabeçalho {
-  background-color: var(--branco);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative; /*aula hamb.*/
+.cabeçalho__menu-hamburguer{
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/Menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+.cabeçalho{
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+}
+.container{
+    display: flex;
+    align-items: center;
+}
+.container__imagem{
+    padding: 1em;
 }
 
-.cabeçalho__menu-hamburguer {
-  width: 24px;
-  height: 24px;
-  background-image: url("../img/Menu.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
+.lista-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+.container__botao:checked~.lista-menu{
+    display: block;
 }
 
-.container {
-  display: flex; 
-  align-items: center;
-}
-
-.container__imagem {
-  padding: 1em;
-}
-
-.lista-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  width: 60vw;//corresponde a 60% do tamanho da tela que eu estou usando
-}
-
-.container__botao:checked~.lista-menu {
-  display: block;
-}
-
-/* aula hamb. 28/06*/
-.container__botao {
-  display: none;
-}
-
-.container__titulo {
-  display: none;
-}
-
-/*hamburguer */
-
-/*deixa o fundo branco e espaçado*/
 .lista-menu__titulo,
-.lista-menu__item {
-  padding: 1em;/*medida responsiva sobre */
-  background-color: var(--branco);
+.lista-menu__item{
+    padding: 1em;
+    background-color: var(--branco);
+    font-weight: 400;
 }
 
-.lista-menu__titulo {
-  color: var(--laranja);
-  font-weight: 700;
+.lista-menu__titulo{
+    color: var(--laranja);
+    font-weight: 700;
 }
 
-.lista-menu__link {
-  background: var(--azul-degrade);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-transform: uppercase;
+.lista-menu__link{
+    background: var(--roxo-degrade);
+    color:rgb(255, 251, 251);
+    background-clip: text;
+    text-transform: uppercase;
 }
 
-.container__botao:checked~.container__rotulo>.cabeçalho__menu-hamburguer {
-  background-image: url("../img/Menu Aberto.svg");
+.container__título{
+    display: none;
 }
 
-.container__botao:checked~.container__rotulo {
-  background: var(--azul-degrade);
+.container__botao{
+    display: none;
+}
+
+.container__botao:checked~.container__rotulo>.cabeçalho__menu-hamburguer{
+    background-image: url("..img/Menu Aberto.svg");
+}
+
+.container__botao:checked~.container__rotulo{
+    background: var(--azul-degrade);
+}
+
+.opções__botão{display: none;
+}
+
+.opções{
+     display: none;
 }
 
 
+
+@media screen and (min-width: 1024px) {
+
+ .container__titulo,
+ .container__titulo--negrito {
+ font-family: var(--fonte-secundario);
+ font-size: 30px;
+    
+     }
+    
+    .container__titulo {
+     font-weight: 400;
+     display: block;
+    color: rgb(5, 5, 5);
+     padding-right: 2em;
+     }
+    
+    .container__titulo--negrito {
+     font-weight: 700;
+    }
+    
+     .opções {
+     display: flex;
+    }
+    
+     .opções__item {
+     padding: 0 1em;
+    color: rgb(2, 2, 2);
+    
+      }
+    
+      .opções__link {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+      }
+    
+      .container__imagem-transparente {
+        display: none;
+      }
+    
+      .cabeçalho__menu-hamburguer {
+        display: none;
+      }
+    
+      .opções__botão:checked~.lista-menu {
+        display: block;
+        width: auto;
+      }
+    
+      .opções__botão {
+        display: none;
+      }
+    
+      .opções__botão:checked~.opções__rotulo>.opções__item {
+        background-color: rgb(3, 3, 3);
+        color: black  ;
+      }
+    
+      .opções__item {
+        padding: 2em 1em;
+      }
+    
+      .lista-menu__item:hover {
+        background: var(--azul-degrade);
+      }
+    
+      .lista-menu__item:hover>.lista-menu__link {
+        color: pink;
+        text-decoration: none;
+      }
+    
+    }
+
+
+/*xxxxxxxxxxxxxxxxxxxxxxx*/
+/* TELAS GRANDES */
+@media screen and (min-width: 1728px) {
+  .container__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--preto);
+  }
+
+  .cabeçalho {
+    padding: 0 2em;
+  }
+
+  .opções {
+    margin-right: auto;
+  }
+
+  .container__texto {
+    display: block;
+  }
+
+  .container__titulo {
+    font-weight: 400;
+    display: block;
+  }
+
+  .container-transparente{
+    display: none;
+  }
+}
